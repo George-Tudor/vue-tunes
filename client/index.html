@@ -13,7 +13,9 @@
         <div v-for="result in results">
             <a :href="result.trackViewUrl">
                 <img :src="result.artworkUrl100.replace('100x100bb', '300x300bb')"/>
-                <div v-text="result.trackName"></div>
+                <div v-text="result.title"></div>
+                <div v-html="result.description"></div>
+
             </a>
         </div>
     </div>
