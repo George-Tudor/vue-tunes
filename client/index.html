@@ -18,9 +18,6 @@
 
             </a>
         </div>
-
-    </div>
-    <div id="titles">
         <div v-if="showTitle">{{ titleSearch }}</div>
         <input v-model="titleSearch"/>
         <button @click="searchTitle">Search for Book Title</button>
@@ -31,6 +28,7 @@
                 <div v-html="result.description"></div>
             </a>
         </div>
+
     </div>
 
 
