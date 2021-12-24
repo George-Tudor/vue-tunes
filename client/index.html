@@ -18,7 +18,21 @@
 
             </a>
         </div>
+
     </div>
+    <div id="titles">
+        <div v-if="showTitle">{{ titleSearch }}</div>
+        <input v-model="titleSearch"/>
+        <button @click="searchTitle">Search for Book Title</button>
+        <div v-for="result in results">
+            <a :href="result.trackViewUrl">
+                <img :src="result.artworkUrl100.replace('100x100bb', '300x300bb')"/>
+                <div v-text="result.title"></div>
+                <div v-html="result.description"></div>
+            </a>
+        </div>
+    </div>
+
 
     <script src="app.js"></script>
 </body>
