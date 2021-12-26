@@ -32,7 +32,7 @@
         <input v-model="searchAuthors"/>
         <button @click="searchAuthorId">Get Authors and Id</button>
         <div v-for="result in results">
-            <a :href="result.authorName"></a>
+            <div v-text="result.authorName"></div>
         </div>
 
 
