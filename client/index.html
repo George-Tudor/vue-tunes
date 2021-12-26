@@ -30,9 +30,9 @@
         </div>
         <div v-if="showAuthors">{{ searchAuthors }}</div>
         <input v-model="searchAuthors"/>
-        <button @click="searchForAuthors">Get Authors and Id</button>
+        <button @click="searchAuthorId">Get Authors and Id</button>
         <div v-for="result in results">
-            <a :href="result.authorTerm"></a>
+            <a :href="result.authorName"></a>
         </div>
 
 
