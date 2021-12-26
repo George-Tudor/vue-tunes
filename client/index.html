@@ -28,6 +28,13 @@
                 <div v-html="result.description"></div>
             </a>
         </div>
+        <div v-if="showAuthors">{{ searchAuthors }}</div>
+        <input v-model="searchAuthors"/>
+        <button @click="searchForAuthors">Get Authors and Id</button>
+        <div v-for="result in results">
+            <a :href="result.authorTerm"></a>
+        </div>
+
 
     </div>
 
